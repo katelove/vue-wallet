@@ -1,9 +1,9 @@
 <template>
-    <div>
+    <div class="flex flex-col">
         <h3>重置登录密码</h3>
         <p>重置登录密码后，24小时内禁止提币和OTC</p>
         <Input placeholder="帐号"/>
-        <Button>提交</Button>
+        <Button bg="bg-melancholyBlue" textColor="text-white">提交</Button>
     </div>
 </template>
 
