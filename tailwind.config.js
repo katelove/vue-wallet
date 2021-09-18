@@ -23,13 +23,12 @@ module.exports = {
 				skyBlue:"#DAF6FF"
 			},
 			fontSize: {
-				"25px": "25px",
 				"12px": "12px",
 				"10px": "10px",
 				"14px": "14px",
 				"20px": "20px",
 				"24px": "24px",
-				'2.1xl': [
+				'25px': [
 					'25px',{
 						lineHeight:'34px'
                     }
@@ -43,6 +42,7 @@ module.exports = {
 				"20px": "20px"
 			},
 			height: {
+				"41px":"41px",
 				"65px": "65px",
 				"27px": "27px",
 				"36px": "36px",
@@ -62,6 +62,7 @@ module.exports = {
 			},
 			padding: {
 				"3px": "3px",
+				"4px":"4px",
 				"6px": "6px",
 				"7px": "7px",
 				"27px": "27px",
@@ -105,11 +106,13 @@ module.exports = {
 				"13px": "13px",
 				"30px": "30px",
 				"31px": "31px",
+				"36px":"36px",
 				"18px": "18px",
 				"39px": "39px",
 				"40px": "40px",
 				"32px": "32px",
 				"35px": "35px",
+				"103px":"103px"
 			},
 			boxShadow: {
 				"normal": "4px 4px 4px rgba(0, 0, 0, 0.25)"
