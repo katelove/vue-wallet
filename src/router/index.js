@@ -7,7 +7,7 @@ const routes = [
     {
         name: "reset",
         path: "/reset", 
-        component: () => import("@/views/Reset/ResetLogin.vue"),
+        component: () => import("@/views/Reset/ResetSafeVerify.vue"),
     }
  ]
 
