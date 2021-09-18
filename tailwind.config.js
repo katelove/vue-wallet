@@ -110,8 +110,10 @@ module.exports = {
 				"18px": "18px",
 				"39px": "39px",
 				"40px": "40px",
+				"48px":"48px",
 				"32px": "32px",
 				"35px": "35px",
+				"52px":"52px",
 				"103px":"103px"
 			},
 			boxShadow: {
