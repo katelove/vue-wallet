@@ -33,6 +33,18 @@ const routes = [
             }
         ]
  
+    },
+    {
+        path: "/register", 
+        component:RouteView,
+        children:[
+            {
+                path: "/register", 
+                name:'Rgister',
+                     component: () => import("@/views/Login/Register/RegisterPage.vue"),
+            },
+        ]
+ 
     }
  ]
 

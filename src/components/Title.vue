@@ -1,7 +1,7 @@
 <template>
 <div class="flex items-center justify-center">
     <p 
-      class="font-normal text-2.1xl font-sans">
+      class="font-normal text-25px">
         {{heading}}
     </p>
 </div>
