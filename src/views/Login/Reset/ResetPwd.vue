@@ -29,6 +29,7 @@
       textColor="text-white"
       rounded="rounded-sm"
       class="mt-48px h-32px p-2.5 "
+      @click="$router.push('/')"
       >提交</Button
     >
   </div>

@@ -19,7 +19,9 @@
     </div>
     <div class="mt-12 flex flex-col justify-start">
       <Input type="text" placeholder=" 谷歌验证码" class="pl-0.5 w-full" />
-      <span class="text-melancholyBlue mt-2 text-left text-xs">安全项丢失?</span>
+      <span class="text-melancholyBlue mt-2 text-left text-xs"
+        >安全项丢失?</span
+      >
     </div>
 
     <div class="flex justify-end mt-12">
@@ -35,6 +37,7 @@
         bg="bg-melancholyBlue"
         rounded="rounded-md"
         textColor="text-white"
+        @click="$router.push('/reset/verify/'+action+ '/' +nextStep)"
         >确认</Button
       >
     </div>
@@ -48,6 +51,12 @@ import Icon from "@/components/Icon.vue";
 
 export default {
   name: "ResetSafeVerify",
+  data() {
+    return {
+      action: this.$route.params.action="safeVerify",
+      nextStep: this.$route.params.nextStep="resetPwd"
+    };
+  },
   components: {
     Input,
     Button,

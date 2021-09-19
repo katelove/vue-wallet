@@ -11,7 +11,7 @@
       successIcon="el-icon-circle-check"
       handlerBg="#30BEED"
       radius="0px"
-      @passcallback="pass"
+      @passcallback="pass(verifyUrl)"
     >
     </drag-verify-img-chip>
 
@@ -24,15 +24,22 @@ export default {
     return {
       img: require("@/assets/verify/verify-img.png"),
       isPassing:false,
+      verifyUrl:['reset'],
+         nextStop:this.$route.params.action="safeVerify"
     };
   },
   components: {
     dragVerifyImgChip,
   },
   methods: {
-    pass() {
-      console.log("滑塊驗證");
+    pass(verifyUrl) {
+      console.log("滑塊驗證"+verifyUrl);
       this.img=''
+      if(verifyUrl == "reset"){
+        console.log('進入reset'+`${verifyUrl}`);
+        this.$router.push('/reset/verify/'+this.nextStop)
+      }
+      
     },
   },
 };

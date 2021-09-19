@@ -2,12 +2,37 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 Vue.use(VueRouter);
-
+const RouteView = {
+	name: 'RouteView',
+	render: h => h('router-view')
+}
 const routes = [
     {
-        name: "reset",
-        path: "/reset", 
-        component: () => import("@/views/Reset/ResetPwd.vue"),
+        path: "/reset/:action/:nextStep", 
+        component:RouteView,
+        children:[
+            {
+                path: "/reset", 
+                name:'ResetLogin',
+                component: () => import("@/views/Login/Reset/ResetLogin.vue"),
+            },
+            {
+                path: "/reset/:action", 
+                name:'ResetDragVerify',
+                component: () => import("@/views/Login/Reset/ResetDragVerify.vue"),
+            },
+            {
+                path: "/reset/:action/:nextStep", 
+                name:'ResetSafeVerify',
+                component: () => import("@/views/Login/Reset/ResetSafeVerify.vue"),
+            },
+            {
+                path: "/reset/verify/:action/:nextStep", 
+                name:'ResetPwd',
+                component: () => import("@/views/Login/Reset/ResetPwd.vue"),
+            }
+        ]
+ 
     }
  ]
 
