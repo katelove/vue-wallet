@@ -29,13 +29,10 @@
             >和<span class="text-melancholyBlue">《隐私条款》</span>
           </p>
         </div>
-        <Button class="w-full mt-12 h-10">注冊</Button>
-        <!-- <button
-          class="bg-melancholyBlue text-white rounded-2px w-full mt-12 h-10"
-          @click="register"
-        >
-          注冊
-        </button> -->
+         <router-link :to="'/register/verify/phone'">
+        <Button class="w-full mt-12 h-10"
+        >注冊</Button>
+         </router-link>
         <p class="text-sm mt-6 text-garyWord">
           已有帐号?<span class="text-melancholyBlue"
             ><router-link to="/login">登录</router-link></span

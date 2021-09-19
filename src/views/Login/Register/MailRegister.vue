@@ -24,7 +24,7 @@
             >和<span class="text-melancholyBlue">《隐私条款》</span>
           </p>
         </div>
-        <Button class="w-full mt-12 h-10">注冊</Button>
+          <router-link :to="'/register/verify'"><Button class="w-full mt-12 h-10">注冊</Button></router-link>
         <!-- <button
           class="bg-melancholyBlue text-white rounded-2px w-full mt-12 h-10"
           @click="register"
