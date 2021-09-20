@@ -42,25 +42,15 @@ const routes = [
         name: "Rgister",
         component: () => import("@/views/Login/Register/RegisterPage.vue"),
       },
-    //   {
-    //     path: "/register/:action",
-    //     name: "ModalDragVerify",
-    //     component: () => import("@/views/Login/ModalDragVerify.vue"),
-    //   },
+      {
+        path: "/register/:action",
+        name: "ModalDragVerify",
+        component: () => import("@/views/Login/ModalDragVerify.vue"),
+      },
       {
         path: "/register/:action/:type",
-        name: "PhoneVerify",
-        component: () => import("@/views/Login/Register/PhoneVerify.vue"),
-      },
-      {
-        path: "/register/verify/mail",
-        name: "MailVerify",
-        component: () => import("@/views/Login/Register/MailVerify.vue"),
-      },
-      {
-        path: "/register/verify/name",
-        name: "NameVerify",
-        component: () => import("@/views/Login/Register/NameVerify.vue"),
+        name: "RegisterVerify",
+        component: () => import("@/views/Login/Register/RegisterVerify.vue"),
       },
     ],
   },

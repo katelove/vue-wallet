@@ -1,6 +1,8 @@
 <template>
   <div class="flex justify-center flex-col ">
-    <div class="border-melancholyBlue border mr-8 ml-8 rounded-4px border-shadow">
+    <div
+      class="border-melancholyBlue border mr-8 ml-8 rounded-4px border-shadow"
+    >
       <div class="p-6">
         <Input
           class="mt-5 w-full input-style"
@@ -24,13 +26,12 @@
             >和<span class="text-melancholyBlue">《隐私条款》</span>
           </p>
         </div>
-          <router-link :to="'/register/verify'"><Button class="w-full mt-12 h-10">注冊</Button></router-link>
-        <!-- <button
-          class="bg-melancholyBlue text-white rounded-2px w-full mt-12 h-10"
-          @click="register"
+        <router-link :to="'/register/verify/mail'"
+          ><Button class="w-full mt-12 h-10" @click="register"
+            >注冊</Button
+          ></router-link
         >
-          注冊
-        </button> -->
+
         <p class="text-sm mt-6 text-garyWord">
           已有帐号?<span class="text-melancholyBlue"
             ><router-link to="/login">登录</router-link></span
@@ -49,7 +50,6 @@ export default {
   methods: {
     register() {
       localStorage.setItem("user_id", "00001");
-      // this.$store.dispatch("progressSite", 2);
     },
   },
   components: {
