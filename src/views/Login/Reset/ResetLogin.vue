@@ -14,7 +14,7 @@
       textColor="text-white"
       rounded="rounded-sm"
       class="mt-36px h-41px p-2.5 "
-      @click="$router.push('/reset/'+nextStop)"
+      @click="$router.push('/reset/dragverify')"
       >提交</Button
     >
   </div>
@@ -25,11 +25,6 @@ import Input from "@/components/Input.vue";
 import Button from "@/components/Button.vue";
 export default {
   name: "ResetLogin",
-  data(){
-    return{
-      nextStop:this.$route.params.action="verify"
-    }
-  },
   components: {
     Input,
     Button,

@@ -37,7 +37,7 @@
         bg="bg-melancholyBlue"
         rounded="rounded-md"
         textColor="text-white"
-        @click="$router.push('/reset/verify/'+action+ '/' +nextStep)"
+        @click="$router.push('/reset/dragverify/safeVerify/resetPwd')"
         >确认</Button
       >
     </div>
@@ -51,12 +51,6 @@ import Icon from "@/components/Icon.vue";
 
 export default {
   name: "ResetSafeVerify",
-  data() {
-    return {
-      action: this.$route.params.action="safeVerify",
-      nextStep: this.$route.params.nextStep="resetPwd"
-    };
-  },
   components: {
     Input,
     Button,

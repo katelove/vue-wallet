@@ -27,7 +27,7 @@ const routes = [
         component: () => import("@/views/Login/Reset/ResetSafeVerify.vue"),
       },
       {
-        path: "/reset/verify/:action/:nextStep",
+        path: "/reset/dragverify/:action/:nextStep",
         name: "ResetPwd",
         component: () => import("@/views/Login/Reset/ResetPwd.vue"),
       },

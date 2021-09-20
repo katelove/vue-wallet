@@ -33,6 +33,8 @@ export default {
         this.$route.params.action=''
         console.log('dragVerify:'+this.$route.params.action);
        this.$emit('update',this.$route.params.action)
+      }else{
+         this.$router.push('/reset/dragverify/safeVerify')
       }
     },
   },
