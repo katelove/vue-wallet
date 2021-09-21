@@ -39,4 +39,8 @@ export default {
 .border-shadow {
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
 }
+.close-top {
+  transform: translateY(-50%);
+  top: 50%;
+}
 </style>

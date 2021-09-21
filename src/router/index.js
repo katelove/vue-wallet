@@ -17,12 +17,7 @@ const routes = [
                 component: () => import("@/views/Login/Login.vue"),
               },
               {
-                path: "/login/:action",
-                name: "ModalDragVerify",
-                component: () => import("@/views/Login/ModalDragVerify.vue"),
-              },
-              {
-                path: "/login/verify/:safeVerify",
+                path: "/login/:action/:safeVerify",
                 name: "LoginSafeVerify",
                 component: () => import("@/views/Login/LoginPage.vue"),
               },
