@@ -7,6 +7,27 @@ const RouteView = {
   render: (h) => h("router-view"),
 };
 const routes = [
+    {
+        path:"/login/:action/:safeVerify",
+        component: RouteView,
+        children:[
+            {
+                path: "/login",
+                name: "Login",
+                component: () => import("@/views/Login/Login.vue"),
+              },
+              {
+                path: "/login/:action",
+                name: "ModalDragVerify",
+                component: () => import("@/views/Login/ModalDragVerify.vue"),
+              },
+              {
+                path: "/login/verify/:safeVerify",
+                name: "LoginSafeVerify",
+                component: () => import("@/views/Login/LoginPage.vue"),
+              },
+        ]
+    },
   {
     path: "/reset/:action/:nextStep",
     component: RouteView,
