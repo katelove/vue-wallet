@@ -7,22 +7,22 @@ const RouteView = {
   render: (h) => h("router-view"),
 };
 const routes = [
-    {
-        path:"/login/:action/:safeVerify",
-        component: RouteView,
-        children:[
-            {
-                path: "/login",
-                name: "Login",
-                component: () => import("@/views/Login/Login.vue"),
-              },
-              {
-                path: "/login/:action/:safeVerify",
-                name: "LoginSafeVerify",
-                component: () => import("@/views/Login/LoginPage.vue"),
-              },
-        ]
-    },
+  {
+    path: "/login/:action/:safeVerify",
+    component: RouteView,
+    children: [
+      {
+        path: "/login",
+        name: "Login",
+        component: () => import("@/views/Login/Login.vue"),
+      },
+      {
+        path: "/login/:action/:safeVerify",
+        name: "LoginSafeVerify",
+        component: () => import("@/views/Login/LoginPage.vue"),
+      },
+    ],
+  },
   {
     path: "/reset/:action/:nextStep",
     component: RouteView,
@@ -67,6 +67,22 @@ const routes = [
         path: "/register/:action/:type",
         name: "RegisterVerify",
         component: () => import("@/views/Login/Register/RegisterVerify.vue"),
+      },
+    ],
+  },
+  {
+    path: "/safeCenter/:type",
+    component: RouteView,
+    children: [
+      {
+        path: "/safeCenter",
+        name: "SafeCenter",
+        component: () => import("@/views/Login/SafeCenter/SafeCenter.vue"),
+      },
+      {
+        path: "/safeCenter/:type",
+        name: "SafeCenter",
+        component: () => import("@/views/Login/SafeCenter/SafeCenterPage.vue"),
       },
     ],
   },
