@@ -2,7 +2,7 @@
     <img
         :src="src"
         style="width: 36px;height:36px"
-    />
+    >
 </template>
 <script>
 export default {
@@ -11,5 +11,5 @@ export default {
             required: true
         }
     }
-}
+};
 </script>

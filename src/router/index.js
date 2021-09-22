@@ -3,95 +3,95 @@ import VueRouter from "vue-router";
 
 Vue.use(VueRouter);
 const RouteView = {
-  name: "RouteView",
-  render: (h) => h("router-view"),
+    name: "RouteView",
+    render: (h) => h("router-view"),
 };
 const routes = [
-  {
-    path: "/login/:action/:safeVerify",
-    component: RouteView,
-    children: [
-      {
-        path: "/login",
-        name: "Login",
-        component: () => import("@/views/Login/Login.vue"),
-      },
-      {
+    {
         path: "/login/:action/:safeVerify",
-        name: "LoginSafeVerify",
-        component: () => import("@/views/Login/LoginPage.vue"),
-      },
-    ],
-  },
-  {
-    path: "/reset/:action/:nextStep",
-    component: RouteView,
-    children: [
-      {
-        path: "/reset",
-        name: "ResetLogin",
-        component: () => import("@/views/Login/Reset/ResetLogin.vue"),
-      },
-      {
-        path: "/reset/:action",
-        name: "ResetDragVerify",
-        component: () => import("@/views/Login/Reset/ResetDragVerify.vue"),
-      },
-      {
+        component: RouteView,
+        children: [
+            {
+                path: "/login",
+                name: "Login",
+                component: () => import("@/views/Login/Login.vue"),
+            },
+            {
+                path: "/login/:action/:safeVerify",
+                name: "LoginSafeVerify",
+                component: () => import("@/views/Login/LoginPage.vue"),
+            },
+        ],
+    },
+    {
         path: "/reset/:action/:nextStep",
-        name: "ResetSafeVerify",
-        component: () => import("@/views/Login/Reset/ResetSafeVerify.vue"),
-      },
-      {
-        path: "/reset/dragverify/:action/:nextStep",
-        name: "ResetPwd",
-        component: () => import("@/views/Login/Reset/ResetPwd.vue"),
-      },
-    ],
-  },
-  {
-    path: "/register/:action/:type",
-    component: RouteView,
-    children: [
-      {
-        path: "/register",
-        name: "Rgister",
-        component: () => import("@/views/Login/Register/RegisterPage.vue"),
-      },
-      {
-        path: "/register/:action",
-        name: "ModalDragVerify",
-        component: () => import("@/views/Login/ModalDragVerify.vue"),
-      },
-      {
+        component: RouteView,
+        children: [
+            {
+                path: "/reset",
+                name: "ResetLogin",
+                component: () => import("@/views/Login/Reset/ResetLogin.vue"),
+            },
+            {
+                path: "/reset/:action",
+                name: "ResetDragVerify",
+                component: () => import("@/views/Login/Reset/ResetDragVerify.vue"),
+            },
+            {
+                path: "/reset/:action/:nextStep",
+                name: "ResetSafeVerify",
+                component: () => import("@/views/Login/Reset/ResetSafeVerify.vue"),
+            },
+            {
+                path: "/reset/dragverify/:action/:nextStep",
+                name: "ResetPwd",
+                component: () => import("@/views/Login/Reset/ResetPwd.vue"),
+            },
+        ],
+    },
+    {
         path: "/register/:action/:type",
-        name: "RegisterVerify",
-        component: () => import("@/views/Login/Register/RegisterVerify.vue"),
-      },
-    ],
-  },
-  {
-    path: "/safeCenter/:type",
-    component: RouteView,
-    children: [
-      {
-        path: "/safeCenter",
-        name: "SafeCenter",
-        component: () => import("@/views/Login/SafeCenter/SafeCenter.vue"),
-      },
-      {
+        component: RouteView,
+        children: [
+            {
+                path: "/register",
+                name: "Rgister",
+                component: () => import("@/views/Login/Register/RegisterPage.vue"),
+            },
+            {
+                path: "/register/:action",
+                name: "ModalDragVerify",
+                component: () => import("@/views/Login/ModalDragVerify.vue"),
+            },
+            {
+                path: "/register/:action/:type",
+                name: "RegisterVerify",
+                component: () => import("@/views/Login/Register/RegisterVerify.vue"),
+            },
+        ],
+    },
+    {
         path: "/safeCenter/:type",
-        name: "SafeCenter",
-        component: () => import("@/views/Login/SafeCenter/SafeCenterPage.vue"),
-      },
-    ],
-  },
+        component: RouteView,
+        children: [
+            {
+                path: "/safeCenter",
+                name: "SafeCenter",
+                component: () => import("@/views/Login/SafeCenter/SafeCenter.vue"),
+            },
+            {
+                path: "/safeCenter/:type",
+                name: "SafeCenter",
+                component: () => import("@/views/Login/SafeCenter/SafeCenterPage.vue"),
+            },
+        ],
+    },
 ];
 
 const router = new VueRouter({
-  routes,
-  mode: "history",
-  //   base: "/frontend",
+    routes,
+    mode: "history",
+    //   base: "/frontend",
 });
 
 export default router;

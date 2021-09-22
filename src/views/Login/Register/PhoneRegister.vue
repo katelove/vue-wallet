@@ -1,45 +1,54 @@
 <template>
-  <div class="flex justify-center flex-col  m-auto ">
-    <div class="border-melancholyBlue border mr-8 ml-8 rounded border-shadow">
-      <div class="p-6">
-        <div class="mt-4 flex self-start">
-          <select class="select-border">
-            <option value="+886" class="text-center">+886</option>
-          </select>
-          <Input
-            type="number"
-            class="input-style w-full"
-            placeholder="  手机号码"
-          />
+    <div class="flex justify-center flex-col  m-auto ">
+        <div class="border-melancholyBlue border mr-8 ml-8 rounded border-shadow">
+            <div class="p-6">
+                <div class="mt-4 flex self-start">
+                    <select class="select-border">
+                        <option
+                            value="+886"
+                            class="text-center"
+                        >
+                            +886
+                        </option>
+                    </select>
+                    <Input
+                        type="number"
+                        class="input-style w-full"
+                        placeholder="  手机号码"
+                    />
+                </div>
+                <Input
+                    class="mt-7 w-full input-style"
+                    type="password"
+                    placeholder="  设置密码"
+                />
+                <Input
+                    class="mt-7 w-full input-style"
+                    type="password"
+                    placeholder="  确认密码"
+                />
+                <div class="flex justify-start mt-7">
+                    <Input type="checkbox" />
+                    <p class="text-sm text-garyWord">
+                        我已阅读并同意<span class="text-melancholyBlue">《用户协议》</span>和<span class="text-melancholyBlue">《隐私条款》</span>
+                    </p>
+                </div>
+                <router-link :to="'/register/verify/phone'">
+                    <Button
+                        class="w-full mt-12 h-10"
+                        @click="register"
+                    >
+                        注冊
+                    </Button>
+                </router-link>
+                <p class="text-sm mt-6 text-garyWord">
+                    已有帐号?<span
+                        class="text-melancholyBlue"
+                    ><router-link to="/login">登录</router-link></span>
+                </p>
+            </div>
         </div>
-        <Input
-          class="mt-7 w-full input-style"
-          type="password"
-          placeholder="  设置密码"
-        />
-        <Input
-          class="mt-7 w-full input-style"
-          type="password"
-          placeholder="  确认密码"
-        />
-        <div class="flex justify-start mt-7">
-          <input type="checkbox" />
-          <p class="text-sm text-garyWord">
-            我已阅读并同意<span class="text-melancholyBlue">《用户协议》</span
-            >和<span class="text-melancholyBlue">《隐私条款》</span>
-          </p>
-        </div>
-        <router-link :to="'/register/verify/phone'">
-          <Button class="w-full mt-12 h-10" @click="register">注冊</Button>
-        </router-link>
-        <p class="text-sm mt-6 text-garyWord">
-          已有帐号?<span class="text-melancholyBlue"
-            ><router-link to="/login">登录</router-link></span
-          >
-        </p>
-      </div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -47,16 +56,16 @@ import Input from "@/components/Input.vue";
 import Button from "@/components/Button.vue";
 
 export default {
-  name: "PhoneRegister",
-  methods: {
-    register() {
-      localStorage.setItem("user_id", "00001");
+    name: "PhoneRegister",
+    components: {
+        Input,
+        Button,
     },
-  },
-  components: {
-    Input,
-    Button,
-  },
+    methods: {
+        register() {
+            localStorage.setItem("user_id", "00001");
+        },
+    },
 };
 </script>
 

@@ -1,6 +1,10 @@
 <template>
     <div class="inline-block switch">
-      <input type="checkbox" class="w-9 h-15px cursor-pointer relative appearance-none outline-none rounded-10px input-time" checked />
+        <input
+            type="checkbox"
+            class="w-9 h-15px cursor-pointer relative appearance-none outline-none rounded-10px input-time"
+            checked
+        >
     </div>
 </template>
 

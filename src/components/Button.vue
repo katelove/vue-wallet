@@ -4,7 +4,7 @@
         v-bind="$attrs"
         @click="$emit('click')"
     >
-        <slot></slot>
+        <slot />
     </button>
 </template>
 <script>
@@ -20,5 +20,5 @@ export default {
             default: "text-white"
         }
     },
-}
+};
 </script>

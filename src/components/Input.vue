@@ -2,9 +2,9 @@
     <input
         :type="type"
         class="border-black	border rounded"
-        @input="$emit('input', $event.target.value)"
         v-bind="$attrs"
-    />
+        @input="$emit('input', $event.target.value)"
+    >
 </template>
 <script>
 export default {
@@ -12,6 +12,6 @@ export default {
         type: {
             default: "text"
         }
-    }    
-}
+    }
+};
 </script>

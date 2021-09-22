@@ -3,38 +3,38 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  state: {
-    user: null,
+    state: {
+        user: null,
 
 
-  },
-  mutations: {
-    SET_USER_DATA(state, userData) {
-      console.log('state:'+ state+' userData:'+userData);
+    },
+    mutations: {
+        SET_USER_DATA(state, userData) {
+      console.log('state:' + state + ' userData:' + userData);
       // 登入==>設置state
-      state.user = userData
+      state.user = userData;
       // 設置localstorage連到自動登入
-      localStorage.setItem('user_id', JSON.stringify(userData))
+      localStorage.setItem('user_id', JSON.stringify(userData));
+        },
+        CLEAR_USER_DATA() {
+      localStorage.removeItem('user_id');
+        }
     },
-    CLEAR_USER_DATA() {      
-      localStorage.removeItem('user_id')
-    }
-  },
-  actions: {
+    actions: {
     // 登入=>帳號和密碼登入
-    login ({ commit }) {
-      commit('SET_USER_DATA')
+        login ({ commit }) {
+            commit('SET_USER_DATA');
+        },
+        // 登出方法
+        logout ({ commit }) {
+      console.log('logout');
+      commit('CLEAR_USER_DATA');
+        }
     },
-    // 登出方法
-    logout ({ commit }) {
-      console.log('logout')
-      commit('CLEAR_USER_DATA')
+    // 創造一個Getter取值
+    getters: {
+        getUser: state => {
+            return state.user;
+        }
     }
-  },
-  // 創造一個Getter取值
-  getters: {
-    getUser: state => {
-      return state.user
-    }
-  }
-})
+});
