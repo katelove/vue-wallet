@@ -2,8 +2,9 @@
     <div class="flex justify-center mt-2 flex-col m-auto">
         <Title
             class="flex justify-center"
-            heading="绑定手机"
-        />
+        >
+            绑定手机
+        </Title>
         <BlueContainer
             title=""
             class="ml-8 mr-8 mt-10"

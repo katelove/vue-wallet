@@ -4,6 +4,7 @@
             class="font-normal text-25px"
         >
             {{ heading }}
+            <slot/>
         </p>
     </div>
 </template>

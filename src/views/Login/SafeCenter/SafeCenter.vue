@@ -2,8 +2,9 @@
     <div class="flex justify-center mt-2 flex-col m-auto mb-8">
         <Title
             class="flex justify-center"
-            heading="安全中心"
-        />
+        >
+            安全中心
+        </Title>
         <BlueContainer
             title=""
             class="ml-8 mr-8 mt-10"
@@ -128,8 +129,9 @@
             <div class="w-full bg-diamondGrey h-2" />
             <div class="p-6">
                 <Button
-                    class="w-full h-10  text-white"
+                    class="w-full h-10"
                     bg="bg-yewLime"
+                    text-color="text-white"
                     rounded="rounded-10px"
                     @click="logout"
                 >
@@ -144,6 +146,7 @@
 import Title from "@/components/Title.vue";
 import BlueContainer from "@/components/BlueContainer.vue";
 import SwithBtn from "@/components/SwitchBtn.vue";
+import Button from "@/components/Button.vue";
 
 export default {
     name: "SafeCenter",
@@ -151,6 +154,7 @@ export default {
         Title,
         BlueContainer,
         SwithBtn,
+        Button
     },
     methods: {
         logout() {
