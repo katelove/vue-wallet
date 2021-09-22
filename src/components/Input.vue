@@ -1,16 +1,37 @@
 <template lang="">
-    <input
-        :type="type"
-        class="border-black	border rounded"
-        v-bind="$attrs"
-        @input="$emit('input', $event.target.value)"
-    >
+    <div class="relative">
+        <input
+            :type="type"
+            class="border-black	border rounded"
+            v-bind="$attrs"
+            @input="$emit('input', $event.target.value)"
+        >
+        <img
+            v-if="showEye"
+            class="absolute right-0 top-6"
+            :src="pic"
+            @click="toggle()"
+        >
+    </div>
 </template>
 <script>
 export default {
     props: {
-        type: {
-            default: "text"
+        showEye: {
+            require: false,
+            default: false,
+            type: Boolean
+        }
+    },
+    data() {
+        return{
+            pic: require("@/assets/icon/eye.png"),
+            type: this.$attrs.type || 'text'
+        };
+    },
+    methods: {
+        toggle() {
+            this.type = this.type === 'text' ? 'password' : 'text';
         }
     }
 };

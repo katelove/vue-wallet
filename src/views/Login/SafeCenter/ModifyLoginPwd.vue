@@ -20,22 +20,19 @@
                 <div class="relative">
                     <Input
                         v-if="$route.params.type === 'modifyPwd'"
-                        id="pwdName"
+                        id="loginPwd"
                         type="password"
+                        :show-eye="true"
                         class="w-full border-none border-line  mt-7"
                         placeholder="请输入当前登录密码"
                     />
                     <Input
                         v-if="$route.params.type === 'secondPwd'"
-                        type="password"
+                        id="loginPwd"
+                        :type="loginPwd ? 'password': 'text'"
                         class="w-full border-none border-line mt-7"
                         placeholder="请输入当前二次验证密码"
                     />
-                    <img
-                        class="absolute right-0 top-6"
-                        :src="pic"
-                        @click="toggle"
-                    >
                 </div>
             </div>
             <div class="w-full bg-diamondGrey h-2" />
@@ -59,10 +56,6 @@
                         class="w-full border-none border-line mt-8"
                         placeholder="请输入新二次验证密码"
                     />
-                    <img
-                        class="absolute right-0 top-6"
-                        src="@/assets/icon/eye.png"
-                    >
                 </div>
             </div>
             <div class="w-full bg-diamondGrey h-2" />
@@ -116,8 +109,8 @@
 import Title from "@/components/Title.vue";
 import BlueContainer from "@/components/BlueContainer.vue";
 import Button from "@/components/Button.vue";
+import Input from "@/components/Input.vue";
 import SmallTitle from "@/components/SmallTitle.vue";
-
 
 export default {
     name: "ModifyLoginPwd",
@@ -126,30 +119,20 @@ export default {
         BlueContainer,
         Button,
         SmallTitle,
-
+        Input
     },
     data() {
-        return{
-            eyeIcon: false,
-            pic: require('@/assets/icon/eye.png')
+        return {
+            pic: require("@/assets/icon/eye.png"),
+            loginPwd: false,
+            newPwd: false,
+            checkPwd: false,
         };
     },
     methods: {
         home() {
             this.$router.push("/");
         },
-        toggle() {
-            // eslint-disable-next-line eqeqeq
-            if(this.eyeIcon === false) {
-                document.getElementById('pwdName').type = 'text';
-                this.pic = require('@/assets/icon/open-eye.png');
-                this.eyeIcon = true;
-            }else{
-                document.getElementById('pwdName').type = 'password';
-                this.pic = require('@/assets/icon/eye.png');
-                this.eyeIcon = false;
-            }
-        }
     },
 };
 </script>
