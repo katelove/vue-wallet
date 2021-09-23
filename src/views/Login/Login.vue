@@ -6,15 +6,15 @@
         />
         <BlueContainer class="ml-8 mr-8">
             <div class="p-6">
-                <Input
+                <BasicInput
                     v-model="actName"
-                    class="w-full h-8.5"
+                    class="w-full h-33px"
                     type="text"
                     placeholder=" 手机/信箱/用户名"
                 />
-                <Input
+                <BasicInput
                     v-model="actPwd"
-                    class="w-full h-8.5 mt-6"
+                    class="w-full h-33px mt-6"
                     type="password"
                     placeholder=" 密码"
                 />
@@ -44,7 +44,7 @@
 <script>
 import Title from "@/components/Title.vue";
 import BlueContainer from "@/components/BlueContainer.vue";
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 import Button from "@/components/Button.vue";
 
 export default {
@@ -52,7 +52,7 @@ export default {
     components: {
         Title,
         BlueContainer,
-        Input,
+        BasicInput,
         Button,
     },
     data() {

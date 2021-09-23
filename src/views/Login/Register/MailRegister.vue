@@ -4,23 +4,23 @@
             class="border-melancholyBlue border mr-8 ml-8 rounded-4px border-shadow"
         >
             <div class="p-6">
-                <Input
-                    class="mt-5 w-full input-style"
+                <BasicInput
+                    class="w-full mt-5 h-33px"
                     type="text"
                     placeholder="  邮箱帐号"
                 />
-                <Input
-                    class="mt-7 w-full input-style"
+                <BasicInput
+                    class="w-full mt-7 h-33px"
                     type="password"
                     placeholder="  设置密码"
                 />
-                <Input
-                    class="mt-7 w-full input-style"
+                <BasicInput
+                    class="mt-7 w-full h-33px"
                     type="password"
                     placeholder="  确认密码"
                 />
                 <div class="flex justify-start items-center mt-7">
-                    <Input type="checkbox" />
+                    <BasicInput type="checkbox" />
                     <p class="text-sm text-garyWord ml-1">
                         我已阅读并同意<span class="text-melancholyBlue">《用户协议》</span>和<span class="text-melancholyBlue">《隐私条款》</span>
                     </p>
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 import Button from "@/components/Button.vue";
 export default {
     name: "MailRegister",
     components: {
-        Input,
+        BasicInput,
         Button,
     },
     methods: {
@@ -78,8 +78,4 @@ export default {
   background: white;
 }
 
-.input-style {
-  height: 33px;
-  border-radius: 4px;
-}
 </style>

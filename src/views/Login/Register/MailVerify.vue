@@ -13,7 +13,7 @@
             <p class="text-yewLime text-center text-sm mt-2.5">
                 邮箱验证码可能被判定为垃圾邮件，请注意查收。
             </p>
-            <Input
+            <BasicInput
                 type="text"
                 class="w-full h-8.5 mt-6 text-center text-base"
                 placeholder="邮箱验证码"
@@ -34,14 +34,14 @@
 
 <script>
 import Title from "@/components/Title.vue";
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 // import Button from "@/components/Button.vue";
 
 export default {
     name: 'MailVerify',
     components: {
         Title,
-        Input,
+        BasicInput,
     // Button
     },
     methods: {

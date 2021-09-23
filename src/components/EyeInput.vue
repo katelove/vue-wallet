@@ -8,7 +8,7 @@
         >
         <img
             v-if="showEye"
-            class="absolute right-0 top-0"
+            class="absolute right-0 -top-0.5"
             :src="pic"
             @click="toggle"
         >
@@ -33,6 +33,9 @@ export default {
         toggle() {
             this.type = this.type === 'text' ? 'password' : 'text';
             this.pic = require("@/assets/icon/open-eye.png");
+            if(this.type === 'password') {
+                this.pic = require("@/assets/icon/eye.png");
+            }
         }
     }
 };
@@ -42,4 +45,8 @@ export default {
 .border-line {
   border-bottom: 1px solid #b0b0b0;
 }
+
+/* img-top{
+    top:-5px
+} */
 </style>

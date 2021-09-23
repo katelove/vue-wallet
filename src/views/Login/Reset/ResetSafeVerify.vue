@@ -7,18 +7,17 @@
                 安全验证
             </h3>
             <Icon
-                class="close-top"
                 :src="require('@/assets/icon/cross.png')"
                 style="width:17px;height:17px"
             />
         </div>
         <div class="relative mt-30px flex flex-col justify-start">
-            <Input
-                class="w-full pl-0.5"
+            <BasicInput
+                class="w-full pl-0.5 h-33px"
                 type="text"
                 placeholder=" 邮箱验证码"
             />
-            <p class="absolute right-0 top-0 text-yewLime">
+            <p class="absolute right-2 word-top text-yewLime">
                 获取验证码
             </p>
             <span
@@ -26,10 +25,10 @@
             >输入您的邮箱sk*****@gmail.com收到的验证码</span>
         </div>
         <div class="mt-12 flex flex-col justify-start">
-            <Input
+            <BasicInput
                 type="text"
                 placeholder=" 谷歌验证码"
-                class="pl-0.5 w-full"
+                class="pl-0.5 w-full h-33px"
             />
             <span
                 class="text-melancholyBlue mt-2 text-left text-xs"
@@ -59,23 +58,22 @@
 </template>
 
 <script>
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 import Button from "@/components/Button.vue";
 import Icon from "@/components/Icon.vue";
 
 export default {
     name: "ResetSafeVerify",
     components: {
-        Input,
+        BasicInput,
         Button,
         Icon,
     },
 };
 </script>
-
 <style>
-.close-top {
+.word-top {
   transform: translateY(-50%);
-  top: 50%;
+  top: 30%;
 }
 </style>

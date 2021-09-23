@@ -10,10 +10,10 @@
                 重置登录密码后，24小时内禁止提币和OTC
             </p>
         </div>
-        <Input
-            placeholder="帐号"
+        <BasicInput
+            placeholder=" 帐号"
             type="text"
-            class="pl-2px mt-8"
+            class="pl-2px h-33px mt-8"
         />
         <Button
             bg="bg-melancholyBlue"
@@ -28,12 +28,12 @@
 </template>
 
 <script>
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 import Button from "@/components/Button.vue";
 export default {
     name: "ResetLogin",
     components: {
-        Input,
+        BasicInput,
         Button,
     },
 };

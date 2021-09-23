@@ -13,13 +13,13 @@
             />
         </div>
         <div class="relative mt-30px">
-            <Input
+            <BasicInput
                 class="w-full pl-0.5"
                 type="password"
                 placeholder=" 新登录密码"
             />
             <Icon
-                class="absolute right-0 close-top"
+                class="absolute right-2 close-top"
                 :src="require('@/assets/icon/more.png')"
                 style="width:5px;height:17px"
             />
@@ -28,7 +28,7 @@
             <span
                 class="text-yewLime  text-left text-xs"
             >8-20位字符 不能为纯数字</span>
-            <Input
+            <BasicInput
                 type="password"
                 placeholder=" 确认新密码"
                 class="pl-0.5 w-full mt-2"
@@ -47,13 +47,13 @@
 </template>
 
 <script>
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 import Icon from "@/components/Icon.vue";
 import Button from "@/components/Button.vue";
 export default {
     name: "ResetDragVerify",
     components: {
-        Input,
+        BasicInput,
         Icon,
         Button,
     },

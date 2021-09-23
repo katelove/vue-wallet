@@ -33,7 +33,7 @@
             </div>
         </div>
         <label class="text-yewLime text-base mt-3.5">输入谷歌验证码</label>
-        <Input
+        <BasicInput
             type="text"
             class="w-full h-8.5 mt-2.5"
         />
@@ -56,13 +56,13 @@
 </template>
 
 <script>
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 import Icon from "@/components/Icon.vue";
 // import Button from "@/components/Button.vue";
 export default {
     name: 'NameVerify',
     components: {
-        Input,
+        BasicInput,
         Icon
     // Button,
     },

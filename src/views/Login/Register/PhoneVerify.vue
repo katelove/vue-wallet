@@ -10,7 +10,7 @@
             <p class="text-yewLime text-center text-sm">
                 请输入您的手机号+97120304582 收到的验证码
             </p>
-            <Input
+            <BasicInput
                 type="text"
                 class="w-full h-8.5 mt-12 text-center text-base"
                 placeholder="手机验证码"
@@ -31,7 +31,7 @@
 
 <script>
 import Title from "@/components/Title.vue";
-import Input from "@/components/Input.vue";
+import BasicInput from "@/components/BasicInput.vue";
 
 // import Button from "@/components/Button.vue";
 
@@ -39,7 +39,7 @@ export default {
     name: "PhoneVerify",
     components: {
         Title,
-        Input
+        BasicInput
     // Button
     },
     methods: {
