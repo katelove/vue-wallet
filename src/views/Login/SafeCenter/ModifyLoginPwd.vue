@@ -18,19 +18,18 @@
                     当前二次验证密码
                 </SmallTitle>
                 <div class="relative">
-                    <Input
+                    <EyeInput
                         v-if="$route.params.type === 'modifyPwd'"
-                        id="loginPwd"
                         type="password"
                         :show-eye="true"
-                        class="w-full border-none border-line  mt-7"
+                        class="mt-7"
                         placeholder="请输入当前登录密码"
                     />
-                    <Input
+                    <EyeInput
                         v-if="$route.params.type === 'secondPwd'"
-                        id="loginPwd"
-                        :type="loginPwd ? 'password': 'text'"
-                        class="w-full border-none border-line mt-7"
+                        type="password"
+                        :show-eye="true"
+                        class="mt-7"
                         placeholder="请输入当前二次验证密码"
                     />
                 </div>
@@ -44,13 +43,13 @@
                     新二次验证密码
                 </SmallTitle>
                 <div class="relative">
-                    <Input
+                    <BasicInput
                         v-if="$route.params.type === 'modifyPwd'"
                         type="password"
                         class="w-full border-none border-line mt-8"
                         placeholder="请输入新登录密码"
                     />
-                    <Input
+                    <BasicInput
                         v-if="$route.params.type === 'secondPwd'"
                         type="password"
                         class="w-full border-none border-line mt-8"
@@ -64,7 +63,7 @@
                     确认登录密码
                 </SmallTitle>
                 <div class="relative">
-                    <Input
+                    <BasicInput
                         type="password"
                         class="w-full border-none border-line  mt-8"
                         placeholder="请再次输入新登录密码"
@@ -81,7 +80,7 @@
                     手机验证码
                 </SmallTitle>
                 <div class="relative">
-                    <Input
+                    <BasicInput
                         type="text"
                         class="w-full border-none border-line  mt-8"
                         placeholder="请输入手机验证码"
@@ -109,7 +108,7 @@
 import Title from "@/components/Title.vue";
 import BlueContainer from "@/components/BlueContainer.vue";
 import Button from "@/components/Button.vue";
-import Input from "@/components/Input.vue";
+import EyeInput from "@/components/EyeInput.vue";
 import SmallTitle from "@/components/SmallTitle.vue";
 
 export default {
@@ -119,15 +118,7 @@ export default {
         BlueContainer,
         Button,
         SmallTitle,
-        Input
-    },
-    data() {
-        return {
-            pic: require("@/assets/icon/eye.png"),
-            loginPwd: false,
-            newPwd: false,
-            checkPwd: false,
-        };
+        EyeInput
     },
     methods: {
         home() {
@@ -137,8 +128,4 @@ export default {
 };
 </script>
 
-<style>
-.border-line {
-  border-bottom: 1px solid #b0b0b0;
-}
-</style>
+

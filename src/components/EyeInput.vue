@@ -2,15 +2,15 @@
     <div class="relative">
         <input
             :type="type"
-            class="border-black	border rounded"
+            class="w-full border-none border-line"
             v-bind="$attrs"
             @input="$emit('input', $event.target.value)"
         >
         <img
             v-if="showEye"
-            class="absolute right-0 top-6"
+            class="absolute right-0 top-0"
             :src="pic"
-            @click="toggle()"
+            @click="toggle"
         >
     </div>
 </template>
@@ -32,7 +32,14 @@ export default {
     methods: {
         toggle() {
             this.type = this.type === 'text' ? 'password' : 'text';
+            this.pic = require("@/assets/icon/open-eye.png");
         }
     }
 };
 </script>
+
+<style>
+.border-line {
+  border-bottom: 1px solid #b0b0b0;
+}
+</style>
