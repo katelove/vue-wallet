@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="flex flex-col mt-25 border-melancholyBlue border mr-8 ml-8 p-6 rounded shadow-normal"
-    >
+    <div class="flex flex-col mt-25 border-melancholyBlue border mr-8 ml-8 p-6 rounded shadow-normal">
         <div class="flex justify-between items-center">
             <h3 class="text-25px text-center">
                 安全验证
@@ -13,26 +11,24 @@
         </div>
         <div class="relative mt-30px flex flex-col justify-start">
             <BasicInput
-                class="w-full pl-0.5 h-33px"
+                class="w-full pl-0.5 "
                 type="text"
+                :show-eye="false"
                 placeholder=" 邮箱验证码"
             />
             <p class="absolute right-2 word-top text-yewLime">
                 获取验证码
             </p>
-            <span
-                class="text-melancholyBlue mt-2 text-xs text-left"
-            >输入您的邮箱sk*****@gmail.com收到的验证码</span>
+            <span class="text-melancholyBlue mt-2 text-xs text-left">输入您的邮箱sk*****@gmail.com收到的验证码</span>
         </div>
         <div class="mt-12 flex flex-col justify-start">
             <BasicInput
                 type="text"
                 placeholder=" 谷歌验证码"
-                class="pl-0.5 w-full h-33px"
+                :show-eye="false"
+                class="pl-0.5 w-full"
             />
-            <span
-                class="text-melancholyBlue mt-2 text-left text-xs"
-            >安全项丢失?</span>
+            <span class="text-melancholyBlue mt-2 text-left text-xs">安全项丢失?</span>
         </div>
 
         <div class="flex justify-end mt-12">
@@ -67,13 +63,13 @@ export default {
     components: {
         BasicInput,
         Button,
-        Icon,
-    },
+        Icon
+    }
 };
 </script>
 <style>
 .word-top {
-  transform: translateY(-50%);
-  top: 30%;
+    transform: translateY(-50%);
+    top: 30%;
 }
 </style>

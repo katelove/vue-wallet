@@ -8,13 +8,15 @@
             <div class="p-6">
                 <BasicInput
                     v-model="actName"
-                    class="w-full h-33px"
+                    :show-eye="false"
+                    class="w-full"
                     type="text"
                     placeholder=" 手机/信箱/用户名"
                 />
                 <BasicInput
                     v-model="actPwd"
-                    class="w-full h-33px mt-6"
+                    :show-eye="false"
+                    class="w-full mt-6"
                     type="password"
                     placeholder=" 密码"
                 />
@@ -26,9 +28,7 @@
                 </Button>
                 <div class="flex justify-between mt-6">
                     <p class="text-yewLime">
-                        没有帐号？<span
-                            class="text-melancholyBlue"
-                        ><router-link to="/register">注册</router-link></span>
+                        没有帐号？<span class="text-melancholyBlue"><router-link to="/register">注册</router-link></span>
                     </p>
                     <p class="text-melancholyBlue">
                         <router-link to="/reset">
@@ -53,24 +53,24 @@ export default {
         Title,
         BlueContainer,
         BasicInput,
-        Button,
+        Button
     },
     data() {
         return {
             actName: "",
-            actPwd: "",
+            actPwd: ""
         };
     },
     methods: {
         login() {
             if (this.actName === "00001" || this.actName === "00002") {
                 localStorage.setItem("user_id", this.actName);
-                this.$router.push('/login/verify/safeVerify');
+                this.$router.push("/login/verify/safeVerify");
             } else {
                 // eslint-disable-next-line no-alert
                 alert("帳號請輸入 00001 或 00002");
             }
-        },
-    },
+        }
+    }
 };
 </script>

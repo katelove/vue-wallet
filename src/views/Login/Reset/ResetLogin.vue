@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="flex flex-col p-6 mr-8 ml-8 mt-103px border border-melancholyBlue rounded shadow-normal"
-    >
+    <div class="flex flex-col p-6 mr-8 ml-8 mt-103px border border-melancholyBlue rounded shadow-normal">
         <h3 class="text-25px">
             重置登录密码
         </h3>
@@ -13,7 +11,8 @@
         <BasicInput
             placeholder=" 帐号"
             type="text"
-            class="pl-2px h-33px mt-8"
+            :show-eye="false"
+            class="pl-2px mt-8"
         />
         <Button
             bg="bg-melancholyBlue"
@@ -34,7 +33,7 @@ export default {
     name: "ResetLogin",
     components: {
         BasicInput,
-        Button,
-    },
+        Button
+    }
 };
 </script>

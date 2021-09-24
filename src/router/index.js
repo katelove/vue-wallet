@@ -84,6 +84,11 @@ const routes = [
                 name: "SafeCenter",
                 component: () => import("@/views/Login/SafeCenter/SafeCenterPage.vue"),
             },
+            {
+                path: "/safeCenter/:type/bindSecondGoogle",
+                name: "SafeCenter",
+                component: () => import("@/views/Login/SafeCenter/BindSecondGoogle.vue"),
+            }
         ],
     },
 ];

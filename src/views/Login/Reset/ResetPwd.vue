@@ -1,7 +1,5 @@
 <template>
-    <div
-        class="flex flex-col mt-25 border-melancholyBlue border mr-8 ml-8 p-6 rounded shadow-normal"
-    >
+    <div class="flex flex-col mt-25 border-melancholyBlue border mr-8 ml-8 p-6 rounded shadow-normal">
         <div class="relative">
             <h3 class="text-25px text-center">
                 新密碼
@@ -14,8 +12,9 @@
         </div>
         <div class="relative mt-30px">
             <BasicInput
-                class="w-full pl-0.5"
+                class="pl-0.5"
                 type="password"
+                :show-eye="false"
                 placeholder=" 新登录密码"
             />
             <Icon
@@ -25,13 +24,12 @@
             />
         </div>
         <div class="mt-12 flex flex-col justify-start">
-            <span
-                class="text-yewLime  text-left text-xs"
-            >8-20位字符 不能为纯数字</span>
+            <span class="text-yewLime  text-left text-xs">8-20位字符 不能为纯数字</span>
             <BasicInput
                 type="password"
+                :show-eye="false"
                 placeholder=" 确认新密码"
-                class="pl-0.5 w-full mt-2"
+                class="pl-0.5 mt-2"
             />
         </div>
         <Button
@@ -55,14 +53,14 @@ export default {
     components: {
         BasicInput,
         Icon,
-        Button,
-    },
+        Button
+    }
 };
 </script>
 
 <style>
 .close-top {
-  transform: translateY(-50%);
-  top: 50%;
+    transform: translateY(-50%);
+    top: 50%;
 }
 </style>

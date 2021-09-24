@@ -13,24 +13,28 @@
                     </select>
                     <BasicInput
                         type="number"
-                        class="h-33px w-full"
+                        :show-eye="false"
                         placeholder="  手机号码"
                     />
                 </div>
                 <BasicInput
-                    class="mt-7 w-full h-33px"
+                    class="mt-7"
                     type="password"
+                    :show-eye="false"
                     placeholder="  设置密码"
                 />
                 <BasicInput
-                    class="mt-7 w-full h-33px"
+                    class="mt-7"
                     type="password"
+                    :show-eye="false"
                     placeholder="  确认密码"
                 />
                 <div class="flex justify-start items-center mt-7">
                     <BasicInput type="checkbox" />
                     <p class="text-sm text-garyWord ml-1">
-                        我已阅读并同意<span class="text-melancholyBlue">《用户协议》</span>和<span class="text-melancholyBlue">《隐私条款》</span>
+                        我已阅读并同意<span class="text-melancholyBlue">《用户协议》</span>和<span
+                            class="text-melancholyBlue"
+                        >《隐私条款》</span>
                     </p>
                 </div>
                 <router-link :to="'/register/verify/phone'">
@@ -42,9 +46,7 @@
                     </Button>
                 </router-link>
                 <p class="text-sm mt-6 text-garyWord">
-                    已有帐号?<span
-                        class="text-melancholyBlue"
-                    ><router-link to="/login">登录</router-link></span>
+                    已有帐号?<span class="text-melancholyBlue"><router-link to="/login">登录</router-link></span>
                 </p>
             </div>
         </div>
@@ -59,30 +61,28 @@ export default {
     name: "PhoneRegister",
     components: {
         BasicInput,
-        Button,
+        Button
     },
     methods: {
         register() {
             localStorage.setItem("user_id", "00001");
-        },
-    },
+        }
+    }
 };
 </script>
 
 <style>
 .border-shadow {
-  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
 }
 
 .select-border {
-  border: 1px solid #000000;
-  box-sizing: border-box;
-  border-radius: 4px;
-  width: 78px;
-  height: 33px;
-  margin-right: 21px;
-  background: white;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 78px;
+    height: 33px;
+    margin-right: 21px;
+    background: white;
 }
-
-
 </style>

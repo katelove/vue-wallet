@@ -19,26 +19,25 @@
 import dragVerifyImgChip from "vue-drag-verify-img-chip";
 export default {
     components: {
-        dragVerifyImgChip,
+        dragVerifyImgChip
     },
     data() {
         return {
             img: require("@/assets/verify/verify-img.png"),
-            isPassing: false,
+            isPassing: false
         };
     },
     methods: {
         pass() {
             this.img = "";
-            console.log(this.$route.params.action);
             if (this.$route.params.action === "verify") {
-                this.$route.params.action = '';
-                console.log('dragVerify:' + this.$route.params.action);
-                this.$emit('update', this.$route.params.action);
-            }else{
-                this.$router.push('/reset/dragverify/safeVerify');
+                this.$route.params.action = "";
+                this.$emit("update", this.$route.params.action);
+                this.$emit("update", this.$route.params.type);
+            } else {
+                this.$router.push("/reset/dragverify/safeVerify");
             }
-        },
-    },
+        }
+    }
 };
 </script>

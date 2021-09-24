@@ -18,20 +18,19 @@ export default {
     name: "LoginPage",
     components: {
         verify: ModalDragVerify,
-        safeVerify: LoginSafeVerify,
-
+        safeVerify: LoginSafeVerify
     },
     data() {
         return {
             view: this.$route.params.safeVerify,
-            model: this.$route.params.action,
+            model: this.$route.params.action
         };
     },
     methods: {
         closeVerify(resp) {
             console.log("LoginVerify resp:" + resp);
             this.model = resp;
-        },
-    },
+        }
+    }
 };
 </script>

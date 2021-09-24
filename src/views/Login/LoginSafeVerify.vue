@@ -4,15 +4,14 @@
             class="flex justify-center mt-10"
             heading="安全验证"
         />
-        <div
-            class="flex flex-col border-melancholyBlue border m-8 p-6 rounded border-shadow"
-        >
+        <div class="flex flex-col border-melancholyBlue border m-8 p-6 rounded border-shadow">
             <p class="text-yewLime text-center text-sm">
                 输入谷歌验证器中6位验证码
             </p>
             <BasicInput
                 type="text"
-                class="w-full h-8.5 mt-12 text-center text-base"
+                :show-eye="false"
+                class="h-8.5 mt-12 "
                 placeholder="谷歌验证码"
             />
             <Button
@@ -43,13 +42,13 @@ export default {
     methods: {
         home() {
             this.$router.push("/");
-        },
-    },
+        }
+    }
 };
 </script>
 
 <style>
 .border-shadow {
-  box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
 }
 </style>

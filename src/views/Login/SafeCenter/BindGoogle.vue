@@ -1,8 +1,6 @@
 <template>
     <div class="flex justify-center mt-2 flex-col m-auto">
-        <Title
-            class="flex justify-center"
-        >
+        <Title class="flex justify-center">
             绑定谷歌验证
         </Title>
         <BlueContainer
@@ -26,17 +24,13 @@
                     <img src="@/views/Login/SafeCenter/google-qr-code.png">
                 </div>
                 <div class="flex justify-center m-4">
-                    <Button
-                        class="w-64 text-center rounded-lg text-xs h-8"
-                    >
+                    <Button class="w-64 text-center rounded-lg text-xs h-8">
                         打開Google Authenticator 進行添加
                     </Button>
                 </div>
 
                 <div class="flex justify-center items-center mt-4">
-                    <p
-                        class="text-bayshoreBlue text-sm mr-5px font-sans tracking-wider not-italic font-normal"
-                    >
+                    <p class="text-bayshoreBlue text-sm mr-5px font-sans tracking-wider not-italic font-normal">
                         GF32ADWE32112FDS3DA1
                     </p>
                     <img
@@ -45,7 +39,7 @@
                     >
                 </div>
                 <div class="p-6">
-                    <router-link to="/safeCenter/bindSecondGoogle">
+                    <router-link to="/safeCenter/bindGoogle/bindSecondGoogle">
                         <Button
                             class="w-full h-10 mt-4"
                             rounded="rounded-10px"
@@ -69,7 +63,7 @@ export default {
     components: {
         Title,
         BlueContainer,
-        Button,
-    },
+        Button
+    }
 };
 </script>

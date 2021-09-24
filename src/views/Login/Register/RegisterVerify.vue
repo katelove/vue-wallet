@@ -1,11 +1,14 @@
 <template>
     <div>
-        <component
+        <!-- <component
             :is="model"
             @update="closeVerify"
-        />
+        /> -->
         <keep-alive>
-            <component :is="view" />
+            <component
+                :is="model"
+                @update="closeVerify"
+            />
         </keep-alive>
     </div>
 </template>
@@ -21,19 +24,17 @@ export default {
         verify: ModalDragVerify,
         phone: PhoneVerify,
         mail: MailVerify,
-        name: NameVerify,
+        name: NameVerify
     },
     data() {
         return {
-            view: this.$route.params.type,
-            model: this.$route.params.action,
+            model: this.$route.params.action
         };
     },
     methods: {
         closeVerify(resp) {
-            console.log("RegisterVerify resp:" + resp);
             this.model = resp;
         },
-    },
+    }
 };
 </script>
