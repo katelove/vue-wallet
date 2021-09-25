@@ -8,39 +8,13 @@
         <div class="border-melancholyBlue border mt-8 mr-8 ml-8 rounded-4px tab-shadow">
             <div class="flex justify-start items-center">
                 <Button
+                    v-for="(item,index) in titleBtn"
+                    :key="index"
                     class="w-1/3  h-12 text-center"
-                    :text-color="[this.view === 'PhoneRegister' ? 'text-white' : 'text-yewLime']"
-                    :bg="[this.view === 'PhoneRegister' ? 'bg-melancholyBlue' : 'bg-white']"
                     rounded="rounded-4px"
-                    @click="changeView('PhoneRegister')"
+                    @click="changeView(item.register)"
                 >
-                    手机号
-                </Button>
-                <Button
-                    class="w-1/3  h-12 text-center"
-                    :text-color="[
-                        this.view === 'MailRegister' ? 'text-white' : 'text-yewLime',
-                    ]"
-                    :bg="[
-                        this.view === 'MailRegister' ? 'bg-melancholyBlue' : 'bg-white',
-                    ]"
-                    rounded="rounded-4px"
-                    @click="changeView('MailRegister')"
-                >
-                    邮箱
-                </Button>
-                <Button
-                    class="w-1/3  h-12 text-center"
-                    :text-color="[
-                        this.view === 'NameRegister' ? 'text-white' : 'text-yewLime',
-                    ]"
-                    :bg="[
-                        this.view === 'NameRegister' ? 'bg-melancholyBlue' : 'bg-white',
-                    ]"
-                    rounded="rounded-4px"
-                    @click="changeView('NameRegister')"
-                >
-                    用戶名
+                    {{ item.word }}
                 </Button>
             </div>
         </div>
@@ -68,6 +42,21 @@ export default {
     data() {
         return {
             view: "PhoneRegister",
+            titleBtn: [{
+                id: 1,
+                word: '手机号',
+                register: 'PhoneRegister'
+
+            }, {
+                id: 2,
+                word: '邮箱',
+                register: 'MailRegister'
+            }, {
+                id: 3,
+                word: '用戶名',
+                register: 'NameRegister'
+            }
+            ]
         };
     },
     methods: {
