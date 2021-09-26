@@ -3,10 +3,25 @@
         <input
             type="checkbox"
             class="w-9 h-15px cursor-pointer relative appearance-none outline-none rounded-10px input-time"
-            checked
+            :checkded="checked"
+            @change="$emit('change',$event.target.checked)"
         >
     </div>
 </template>
+
+<script>
+
+export default {
+    name: 'SwitchBtn',
+    model: {
+        prop: 'checked',
+        event: 'change'
+    },
+    props: {
+        checked: Boolean
+    }
+};
+</script>
 
 <style>
 .input-time{

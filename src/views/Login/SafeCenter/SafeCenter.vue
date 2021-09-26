@@ -29,13 +29,13 @@
                     <p class="text-base">
                         面容支付
                     </p>
-                    <SwithBtn />
+                    <SwithBtn v-model="buttonValue" />
                 </div>
                 <div class="flex justify-between mt-6">
                     <p class="text-base">
                         支付二次验证
                     </p>
-                    <SwithBtn />
+                    <SwithBtn v-model="buttonValue" />
                 </div>
                 <div class="flex justify-between mt-6">
                     <p class="text-base">
@@ -111,19 +111,19 @@
                     <p class="text-base">
                         保持登录
                     </p>
-                    <SwithBtn />
+                    <SwithBtn v-model="buttonValue" />
                 </div>
                 <div class="flex justify-between mt-6">
                     <p class="text-base">
                         面容解锁
                     </p>
-                    <SwithBtn />
+                    <SwithBtn v-model="buttonValue" />
                 </div>
                 <div class="flex justify-between mt-6">
                     <p class="text-base">
                         手勢解锁
                     </p>
-                    <SwithBtn />
+                    <SwithBtn v-model="buttonValue" />
                 </div>
             </div>
             <div class="w-full bg-diamondGrey h-2" />
@@ -155,6 +155,11 @@ export default {
         BlueContainer,
         SwithBtn,
         Button
+    },
+    data() {
+        return{
+            buttonValue: false
+        };
     },
     methods: {
         logout() {
