@@ -3,14 +3,9 @@
         <p
             class="font-normal text-25px"
         >
-            {{ heading }}
-            <slot/>
+            <slot />
         </p>
     </div>
 </template>
 
-<script>
-export default {
-    props: ['heading'],
-};
-</script>
+

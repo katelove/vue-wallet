@@ -11,6 +11,12 @@
                     v-for="(item,index) in titleBtn"
                     :key="index"
                     class="w-1/3  h-12 text-center"
+                    :text-color="[
+                        view === item.register ? 'text-white' : 'text-yewLime',
+                    ]"
+                    :bg="[
+                        view === item.register ? 'bg-melancholyBlue' : 'bg-white',
+                    ]"
                     rounded="rounded-4px"
                     @click="changeView(item.register)"
                 >
@@ -67,7 +73,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .tab-shadow {
   box-shadow: 4px 0px 3px rgba(0, 0, 0, 0.4);
 }

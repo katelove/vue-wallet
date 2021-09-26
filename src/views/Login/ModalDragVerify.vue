@@ -1,12 +1,11 @@
 <template>
     <div class="fixed top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center bg-grey z-10">
         <div class="border-shadow border-melancholyBlue border p-4 rounded bg-white">
-            <div class="flex justify-between items-center relative">
-                <h3 class="text-lg">
+            <div class="flex justify-center items-center">
+                <h3 class="text-lg flex-grow">
                     请完成安全认证
                 </h3>
                 <Icon
-                    class="absolute right-0 close-top"
                     :src="require('@/assets/icon/cross.png')"
                     style="width:17px;height:17px"
                 />
@@ -33,15 +32,11 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .bg-grey {
     background: rgba(0, 0, 0, 0.31);
 }
 .border-shadow {
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
-}
-.close-top {
-    transform: translateY(-50%);
-    top: 50%;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col mt-25 border-melancholyBlue border mr-8 ml-8 p-6 rounded shadow-normal">
         <div class="flex justify-between items-center">
-            <h3 class="text-25px text-center">
+            <h3 class="text-25px">
                 安全验证
             </h3>
             <Icon
@@ -67,7 +67,7 @@ export default {
     }
 };
 </script>
-<style>
+<style scoped>
 .word-top {
     transform: translateY(-50%);
     top: 30%;

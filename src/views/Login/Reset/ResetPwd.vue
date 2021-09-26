@@ -1,11 +1,10 @@
 <template>
     <div class="flex flex-col mt-25 border-melancholyBlue border mr-8 ml-8 p-6 rounded shadow-normal">
-        <div class="relative">
-            <h3 class="text-25px text-center">
+        <div class="flex justify-center items-center">
+            <h3 class="text-25px flex-grow">
                 新密碼
             </h3>
             <Icon
-                class="absolute right-0 close-top"
                 :src="require('@/assets/icon/cross.png')"
                 style="width:17px;height:17px"
             />
@@ -58,7 +57,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .close-top {
     transform: translateY(-50%);
     top: 50%;

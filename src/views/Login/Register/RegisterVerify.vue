@@ -1,9 +1,5 @@
 <template>
     <div>
-        <!-- <component
-            :is="model"
-            @update="closeVerify"
-        /> -->
         <keep-alive>
             <component
                 :is="model"

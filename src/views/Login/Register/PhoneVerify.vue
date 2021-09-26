@@ -2,8 +2,9 @@
     <div>
         <Title
             class="flex justify-center mt-10"
-            heading="手机验证"
-        />
+        >
+            手机验证
+        </Title>
         <div
             class="flex flex-col border-melancholyBlue border m-8 p-6 rounded border-shadow"
         >
@@ -50,7 +51,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .border-shadow {
   box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
 }

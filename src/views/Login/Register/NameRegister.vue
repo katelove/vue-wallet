@@ -61,7 +61,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .border-shadow {
     box-shadow: 4px 4px 3px rgba(0, 0, 0, 0.4);
 }

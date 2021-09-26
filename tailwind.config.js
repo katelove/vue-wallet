@@ -128,6 +128,9 @@ module.exports = {
                 '25': '6.438rem',
                 '75': '18.625rem',
                 '86': '21.875rem'
+            },
+            flexGrow: {
+                DEFAULT: 2,
             }
         },
     },
