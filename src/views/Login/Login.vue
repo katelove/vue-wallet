@@ -4,6 +4,12 @@
             class="flex justify-center mb-6"
             heading="欢迎登录测试钱包"
         />
+        <Confirm
+            @onConfirm="$router.push('/')"
+            @onCancel="alert('12323')"
+        >
+            got home
+        </Confirm>
         <BlueContainer class="ml-8 mr-8">
             <div class="p-6">
                 <BasicInput
@@ -46,6 +52,7 @@ import Title from "@/components/Title.vue";
 import BlueContainer from "@/components/BlueContainer.vue";
 import BasicInput from "@/components/BasicInput.vue";
 import Button from "@/components/Button.vue";
+import Confirm from "@/components/Confirm.vue";
 
 export default {
     name: "Login",
@@ -53,7 +60,8 @@ export default {
         Title,
         BlueContainer,
         BasicInput,
-        Button
+        Button,
+        Confirm
     },
     data() {
         return {

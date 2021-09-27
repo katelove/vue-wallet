@@ -1,5 +1,8 @@
 <template>
-    <div class="fixed top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center bg-grey z-10">
+    <div
+        id="modalDrag"
+        class="fixed top-0 bottom-0 left-0 right-0 flex flex-col justify-center items-center bg-grey z-10"
+    >
         <div class="border-shadow border-melancholyBlue border p-4 rounded bg-white">
             <div class="flex justify-center items-center">
                 <h3 class="text-lg flex-grow">
@@ -8,6 +11,7 @@
                 <Icon
                     :src="require('@/assets/icon/cross.png')"
                     style="width:17px;height:17px"
+                    @onClose="$router.push('/register')"
                 />
             </div>
             <div class="flex justify-center">
@@ -28,7 +32,7 @@ export default {
     components: {
         dragVerify,
         Icon
-    }
+    },
 };
 </script>
 

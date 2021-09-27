@@ -4,8 +4,8 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
     state: {
+        // eslint-disable-next-line no-undef
         user: null,
-
 
     },
     mutations: {
